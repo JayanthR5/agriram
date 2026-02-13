@@ -4,27 +4,25 @@ const cors = require("cors");
 const connectDB = require("./config/db");
 
 const app = express();
+
+// Connect Database
 connectDB();
-git
+
+// Middlewares
 app.use(cors());
 app.use(express.json());
 
+// Routes
 app.use("/api/auth", require("./routes/authRoutes"));
-
-app.listen(5000, () => console.log("Server running"));
-
-
-// connect  router
 app.use("/api/batches", require("./routes/batchRoutes"));
-
-///add route 
 app.use("/api/inspections", require("./routes/inspectionRoutes"));
-
-
-//
 app.use("/api/certificates", require("./routes/certificateRoutes"));
-
-
-///
-
 app.use("/api/verify", require("./routes/verifyRoutes"));
+
+// Port
+const PORT = process.env.PORT || 5000;
+
+// Start Server (ONLY ONCE)
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
