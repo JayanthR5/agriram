@@ -23,3 +23,8 @@ app.use("/api/inspections", require("./routes/inspectionRoutes"));
 
 //
 app.use("/api/certificates", require("./routes/certificateRoutes"));
+
+
+///
+
+app.use("/api/verify", require("./routes/verifyRoutes"));
