@@ -1,8 +1,6 @@
 # 🌾 AgriRam - Smart Agriculture Platform
 
-![React](https://img.shields.io/badge/React-blue)
-![Node.js](https://img.shields.io/badge/Node.js-green)
-![MongoDB](https://img.shields.io/badge/MongoDB-brightgreen)
+
 
 ## 📖 Overview
 
